@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Gambar WhatsApp 2023-10-19 pukul 10.19.36_991bfd83.jpg">
+</head>
+<body>
+    <header class="header">
+        <a href="#"><span>Tha</span>nia</a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#about"> <span>About Me</span></a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <section class="home reveal">
+        <div class="content">
+            <h1>Hi! I'm <span>Thania</span></h1>
+            <p>I'm a Computer Science student at <span>Medan State University. </span>Welcome to my personal website.</p>
+        </div>
+
+        <div class="image">
+            <img src="img/my.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="about" class="about reveal">
+        <h2><span>About Me</span></h2>
+        <div class="intro">
+            <div class="about-content">
+                <div class="image">
+                    <img src="img/hobi.jpg" alt="">
+                </div>
+            </div>
+            <p>Hi everyone! My name is Thania Dealva Arsyad, and I'm 18 years old.
+                I live in Binjai, North Sumatra, Indonesia, but I was born in Ketapang,
+                23rd December 2005. My hobbies include listening to music and occasionally doing some
+                programming. While I'm not an expert yet, I'm passionate about coding, and my dream is to 
+                become a professional programmer.</p>
+        </div>
+    </section>
+
+    <section id="education" class="education reveal">
+        <h2>Education</h2>
+        <div class="education-list">
+            <div class="education-item">
+                <div class="education-name">
+                    <h3>Medan State University</h3>
+                    <p>Computer Science Student</p>
+                    <span>2023</span>
+                </div>
+                <img src="img/logounimed.png" alt="">
+            </div>
+            <div class="education-item">
+                <div class="education-name">
+                    <h3>SMA Negeri 15 Kab. Tangerang</h3>
+                    <p>Science Major</p>
+                    <span>2020 - 2022</span>
+                </div>
+                <img src="img/th (1).jpeg" alt="">
+            </div>
+            <div class="education-item">
+                <div class="education-name">
+                    <h3>SMA Negeri 5 Binjai</h3>
+                    <p>Science Major</p>
+                    <span>2022 - 2023</span>
+                </div>
+                <img src="img/smanli.png" alt="">
+            </div>
+            <div class="education-item">
+                <div class="education-name">
+                    <h3>SMP Negeri 1 Binjai</h3>
+                    <p>General Studies</p>
+                    <span>2017 - 2018</span>
+                </div>
+                <img src="img/Logospensa.png" alt="">
+            </div>
+            <div class="education-item">
+                <div class="education-name">
+                    <h3>SMP Negeri 1 Panongan</h3>
+                    <p>General Studies</p>
+                    <span>2018 - 2020</span>
+                </div>
+                <img src="img/th.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <footer class="footer">
+            <h2>Contact Me</h2>
+                <div class="social-links">
+                    <a href="https://wa.me/6288213072463" target="_blank">
+                        <img src="img/whatsapp.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://instagram.com/opqrsthania" target="_blank">
+                        <img src="img/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="mailto:thaniadealvaarsyad@gmail.com">
+                        <img src="img/mail-inbox-app.png" alt="Email">
+                    </a>
+                    <!-- Tambah link lain di sini kalau perlu -->
+                </div>
+                <p>&copy; 2024 Thania Dealva Arsyad. All rights reserved.</p>
+        </footer>
+    </section>
+</body>
+
+<script>
+    // Intersection Observer buat deteksi scroll
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            entry.target.classList.remove('active');
+        }
+    });
+}, {
+    threshold: 0.2 // Muncul saat 20% dari elemen terlihat
+});
+
+reveals.forEach((reveal) => {
+    observer.observe(reveal);
+});
+</script>
+
+</html>
