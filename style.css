@@ -1,3 +1,9 @@
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue; /* Ganti warna background di layar kecil */
+    }
+}
+
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
